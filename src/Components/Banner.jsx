@@ -1,0 +1,42 @@
+import React from "react";
+import Nav from "./Nav";
+import bannerImage from "../assets/images/hero.svg";
+import object from "../assets/images/OBJECTS_x0A_.svg";
+const Banner = () => {
+  return (
+    <div
+      className="bg-cover bg-center h-auto rounded-[15px] py-6 sm:px-8 px-1 "
+      style={{ backgroundImage: `url(${bannerImage})` }}
+    >
+      <Nav />
+      <div className="mt-7 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
+        {/* Left Side */}
+        <div className="w-full lg:w-[43%] sm:w-[100%] px-4 lg:px-0">
+          <h1 className="tracking-wide font-semibold leading-snug text-3xl sm:text-4xl text-white mb-2">
+            The <span className="text-amber-400">Campus Marketplace </span>
+            That Brings <span className="text-amber-400">Students </span>
+            <span className="text-amber-400">Together</span>
+          </h1>
+
+          <p className="tracking-wider text-[13px] text-[#ffffffe4] w-full lg:w-[70%] mt-3 mb-4">
+            The first e-commerce platform built exclusively for{" "}
+            <span className="text-amber-400">all</span> Nigerian university
+            students. Buy, sell and grow all within your campus community
+          </p>
+          <button className="tracking-wide text-[13px] font-[300] bg-amber-300 px-6 py-2.5 mt-4 rounded-[8px]">
+            Join The Waitlist
+          </button>
+        </div>
+
+        {/* Right Side */}
+        <div className="w-full lg:w-[48%] px-4 lg:px-0 mt-6 lg:mt-0">
+          <div className="bg-green-200 rounded-[10px] pt-10 px-10">
+            <img src={object} alt="" className="w-full max-w-[440px] mx-auto" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Banner;
