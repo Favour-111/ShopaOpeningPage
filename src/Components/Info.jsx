@@ -58,15 +58,13 @@ const Info = () => {
                 style={{ backgroundColor: item.background }}
               >
                 <div className="mb-3">
-                  <Icon size={25} color={item.iconColor} />
+                  <Icon size={30} color={item.iconColor} />
                 </div>
 
-                <h1 className="text-xl sm:text-2xl mt-5 font-bold">
+                <h1 className="text-2xl sm:text-2xl mt-5 font-bold">
                   {item.Header}
                 </h1>
-                <p className="opacity-80 text-sm sm:text-base mt-2">
-                  {item.content}
-                </p>
+                <p className="opacity-80 text-[13px] mt-2">{item.content}</p>
                 <img
                   src={item.image}
                   alt={item.Header}
