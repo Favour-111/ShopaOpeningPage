@@ -1,6 +1,12 @@
 import React from "react";
 import banner from "../assets/images/Section.svg";
 const Carousel = () => {
+  const handleJoinClick = () => {
+    const el = document.getElementById("waitlist");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <div
       className="bg-cover bg-center bg-no-repeat rounded-[10px] sm:mt-10 mt-0 py-16 px-4 sm:py-20 sm:px-6 md:py-24 md:px-10"
@@ -16,7 +22,11 @@ const Carousel = () => {
           app before it's launched to the public
         </h1>
 
-        <button className="tracking-wide text-[12px] sm:text-[13px] md:text-[14px] font-[300] bg-amber-300 px-5 sm:px-6 md:px-8 py-2 sm:py-3 mt-4 rounded-[8px]">
+        <button
+          type="button"
+          onClick={handleJoinClick}
+          className="tracking-wide text-[12px] sm:text-[13px] md:text-[14px] font-light bg-amber-300 px-5 sm:px-6 md:px-8 py-2 sm:py-3 mt-4 rounded-lg"
+        >
           Join The Waitlist
         </button>
       </div>

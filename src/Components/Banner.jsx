@@ -3,6 +3,12 @@ import Nav from "./Nav";
 import bannerImage from "../assets/images/hero.svg";
 import object from "../assets/images/OBJECTS_x0A_.svg";
 const Banner = () => {
+  const handleJoinClick = () => {
+    const el = document.getElementById("waitlist");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <div
       className="bg-cover bg-center h-auto rounded-[15px] py-6 sm:px-8 px-1 "
@@ -11,8 +17,8 @@ const Banner = () => {
       <Nav />
       <div className="mt-7 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
         {/* Left Side */}
-        <div className="w-full lg:w-[43%] sm:w-[100%] px-4 lg:px-0">
-          <h1 className="tracking-wide font-semibold leading-snug text-3xl sm:text-4xl text-white mb-2">
+        <div className="w-full lg:w-[43%] sm:w-full px-4 lg:px-0 text-center lg:text-left">
+          <h1 className="tracking-wide font-semibold leading-snug text-2xl sm:text-3xl lg:text-4xl text-white mb-2">
             The <span className="text-amber-400">Campus Marketplace </span>
             That Brings <span className="text-amber-400">Students </span>
             <span className="text-amber-400">Together</span>
@@ -23,7 +29,11 @@ const Banner = () => {
             <span className="text-amber-400">all</span> Nigerian university
             students. Buy, sell and grow all within your campus community
           </p>
-          <button className="tracking-wide text-[13px] font-[300] bg-amber-300 px-6 py-2.5 mt-4 rounded-[8px]">
+          <button
+            type="button"
+            onClick={handleJoinClick}
+            className="tracking-wide text-[13px] font-light bg-amber-300 px-6 py-2.5 mt-4 rounded-lg mx-auto lg:mx-0"
+          >
             Join The Waitlist
           </button>
         </div>

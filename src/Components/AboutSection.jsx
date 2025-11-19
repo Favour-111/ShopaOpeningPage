@@ -49,7 +49,9 @@ const AboutSection = () => {
                 <Icon size={20} className="text-green-700" />
               </div>
               <h1 className="text-[18px] font-bold leading-6">{item.header}</h1>
-              <p className="mt-2 text-[14px] text-[#787878]">{item.content}</p>
+              <p className="mt-2 text-[14px] font-[300] text-[#a3a3a3]">
+                {item.content}
+              </p>
             </div>
           );
         })}
